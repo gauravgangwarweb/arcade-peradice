@@ -3,31 +3,74 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  background-color: #000000;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.confirm-roll-button {
+  display: inline-block;
+  padding: 10px 60px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #000;
+  border: 2px solid #00ffcc;
+  border-radius: 30px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 0 10px #00ffcc;
+  transition: all 0.3s ease;
+}
+
+.confirm-roll-button:hover {
+  box-shadow: 0 0 20px #00ffcc;
+}
+
+@keyframes glow {
+  0% {
+      box-shadow: 0 0 10px #00ffcc;
+  }
+  50% {
+      box-shadow: 0 0 20px #00ffcc;
+  }
+  100% {
+      box-shadow: 0 0 10px #00ffcc;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.confirm-roll-button:active {
+  animation: glow 1s infinite;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+
+.roll-button {
+  display: inline-block;
+  padding: 10px 70px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #000;
+  border: 2px solid #EB0F76;
+  border-radius: 30px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 0 10px #EB0F76;
+  transition: all 0.3s ease;
+}
+
+.roll-button:hover {
+  box-shadow: 0 0 20px #EB0F76;
+}
+
+@keyframes glow2 {
+  0% {
+      box-shadow: 0 0 10px #EB0F76;
   }
+  50% {
+      box-shadow: 0 0 20px #EB0F76;
+  }
+  100% {
+      box-shadow: 0 0 10px #EB0F76;
+  }
+}
+
+.roll-button:active {
+  animation: glow2 1s infinite;
 }

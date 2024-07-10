@@ -1,7 +1,15 @@
+import localfont from "next/font/local"
 import { Inter } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+
+const retro = localfont({
+  src: [{
+    path: "../../public/fonts/retro-gaming.ttf"
+  }],
+  variable: "--font-retro",
+})
 
 export const metadata = {
   title: "Create Next App",
@@ -10,7 +18,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${retro.variable}`}>
       <body className={inter.className}>{children}</body>
     </html>
   );
