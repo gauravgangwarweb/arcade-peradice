@@ -33,7 +33,7 @@ const PlayArea = () => {
             onClick={() => setPlay(true)}
             className="text-[#A6FFEE] text-lg font-semibold border-2 border-[#48EFD0] py-2 px-10"
           >
-            HINT TO PLAY
+            MINT TO PLAY
           </button>
         )}
       </div>

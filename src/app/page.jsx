@@ -8,7 +8,7 @@ export default function Home() {
         Your browser does not support the video tag.
       </video>
       <img
-        className="w-80 absolute top-40"
+        className="w-80 absolute top-32"
         loading="lazy"
         src="logo.png"
         alt="logo"
