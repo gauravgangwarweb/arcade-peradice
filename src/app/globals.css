@@ -8,11 +8,10 @@
 
 .roll-button {
   display: inline-block;
-  padding: 10px 70px;
   font-size: 14px;
   color: #fff;
   background-color: #000;
-  border: 2px solid #EB0F76;
+  border: 4px solid #EB0F76;
   border-radius: 30px;
   text-align: center;
   text-decoration: none;
@@ -21,7 +20,7 @@
 }
 
 .roll-button:hover {
-  box-shadow: 0 0 20px #EB0F76;
+  box-shadow: 0 0 40px #EB0F76;
 }
 
 @keyframes glow2 {
@@ -41,50 +40,14 @@
 .roll-button:active {
   animation: glow2 1s infinite;
 }
-/* 
-.confirm-roll-button {
-  display: inline-block;
-  padding: 10px 60px;
-  font-size: 14px;
-  color: #fff;
-  background-color: #000;
-  border: 2px solid #00ffcc;
-  border-radius: 30px;
-  text-align: center;
-  text-decoration: none;
-  box-shadow: 0 0 10px #00ffcc;
-  transition: all 0.3s ease;
-}
-
-.confirm-roll-button:hover {
-  box-shadow: 0 0 20px #00ffcc;
-}
-
-@keyframes glow {
-  0% {
-    box-shadow: 0 0 10px #00ffcc;
-  }
-
-  50% {
-    box-shadow: 0 0 20px #00ffcc;
-  }
-
-  100% {
-    box-shadow: 0 0 10px #00ffcc;
-  }
-}
-
-.confirm-roll-button:active {
-  animation: glow 1s infinite;
-} */
 
 .button {
   position: relative;
   color: white;
   width: 230px;
   height: 60px;
-  border-radius: 2em;
-  background: linear-gradient(97deg, rgba(201, 2, 95, 1) 0%, rgba(61, 68, 255, 1) 100%);
+  border-radius: 2px;
+  border: 5px solid #48EFD0;
 }
 
 .button::before, .button::after {
@@ -94,7 +57,8 @@
   height: 100%;
   left: 0;
   top: 0;
-  border-radius: 2em;
+  border-radius: 2px;
+  border: none;
   background: repeating-linear-gradient(-45deg, red 0%, yellow 7.14%, lime 14.28%, aqua 21.42%, cyan 28.56%, blue 35.7%, magenta 42.84%, red 50%);
   background-size: 200vw 200vw;
   animation: gradient 5s linear infinite;
@@ -112,9 +76,18 @@
   }
 }
 
-.button:hover:before, .button:hover:after {
+.button:hover::before, .button:hover::after {
   opacity: 1;
   visibility: visible;
+  border: none !important;
+}
+
+.button:hover::before {
+  filter: blur(20px);
+}
+
+.button:hover {
+  border: none;
 }
 
 .button span {
@@ -136,9 +109,85 @@
   z-index: -1;
   top: 5px;
   left: 5px;
-  border-radius: 2em;
+  border-radius: 2px;
 }
 
 .button:hover span::before {
+  background-color: black;
+}
+
+/* confirm-roll-animation */
+.confirm-button {
+  position: relative;
+  color: white;
+  width: 230px;
+  height: 60px;
+  border-radius: 2em;
+  border: 5px solid #48EFD0;
+}
+
+.confirm-button::before, .confirm-button::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 2em;
+  border: none;
+  background: repeating-linear-gradient(-45deg, red 0%, yellow 7.14%, lime 14.28%, aqua 21.42%, cyan 28.56%, blue 35.7%, magenta 42.84%, red 50%);
+  background-size: 200vw 200vw;
+  animation: gradient2 5s linear infinite;
+  opacity: 0;
+  visibility: hidden;
+}
+
+@keyframes gradient2 {
+  0% {
+    background-position-x: 0%;
+  }
+
+  100% {
+    background-position-x: 200vw;
+  }
+}
+
+.confirm-button:hover::before, .confirm-button:hover::after {
+  opacity: 1;
+  visibility: visible;
+  border: none !important;
+}
+
+.confirm-button:hover::before {
+  filter: blur(20px);
+}
+
+.confirm-button:hover {
+  border: none;
+}
+
+.confirm-button span {
+  position: relative;
+  z-index: 10;
+  width: 230px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.confirm-button span::before {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 50px;
+  background-color: transparent;
+  z-index: -1;
+  top: 5px;
+  left: 5px;
+  border-radius: 2em;
+}
+
+.confirm-button:hover span::before {
   background-color: black;
 }
