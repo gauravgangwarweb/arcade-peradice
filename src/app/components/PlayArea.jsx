@@ -26,14 +26,14 @@ const PlayArea = () => {
         {play ? (
           <div className="flex flex-col md:flex-row gap-10">
             <button className="roll-button">ROLL (1/10)</button>
-            <button className="confirm-roll-button">CONFIRM ROLL</button>
+            <button className="button"><span>CONFIRM ROLL</span></button>
           </div>
         ) : (
           <button
             onClick={() => setPlay(true)}
-            className="text-[#A6FFEE] text-lg font-semibold border-2 border-[#48EFD0] py-2 px-10"
+            className="text-[#A6FFEE] text-lg font-semibold button"
           >
-            MINT TO PLAY
+            <span>MINT TO PLAY</span>
           </button>
         )}
       </div>
