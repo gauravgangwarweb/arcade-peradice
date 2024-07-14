@@ -83,11 +83,13 @@
 }
 
 .button:hover::before {
+  border-radius: 0%;
   filter: blur(20px);
 }
 
 .button:hover {
   border: none;
+  border-radius: 0;
 }
 
 .button span {
@@ -159,7 +161,7 @@
 }
 
 .confirm-button:hover::before {
-  filter: blur(20px);
+  filter: blur(30px);
 }
 
 .confirm-button:hover {
