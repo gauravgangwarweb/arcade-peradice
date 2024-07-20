@@ -193,3 +193,17 @@
 .confirm-button:hover span::before {
   background-color: black;
 }
+
+.connect-2 {
+  background-color: #1d1d1d;
+  color: #00d1ff;
+  border: 2px solid #00d1ff;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
