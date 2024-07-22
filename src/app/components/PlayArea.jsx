@@ -3,7 +3,6 @@
 import { useState } from "react";
 
 const PlayArea = () => {
-  const [play, setPlay] = useState(false);
   const [isHoveredRoll, setIsHoveredRoll] = useState(false);
   const [isActiveRoll, setIsActiveRoll] = useState(false);
 
@@ -47,33 +46,24 @@ const PlayArea = () => {
         alt="middle-image"
       />
       <div className="mt-6 ">
-        {play ? (
-          <div className="flex flex-col md:flex-row gap-10">
-            <button
-              onMouseEnter={() => setIsHoveredRoll(true)}
-              onMouseLeave={() => setIsHoveredRoll(false)}
-              onMouseDown={() => setIsActiveRoll(true)}
-              onMouseUp={() => setIsActiveRoll(false)}
-            >
-              <img src={rollImageSource()} alt="button icon" />
-            </button>
-            <button
-              onMouseEnter={() => setIsHoveredConfirm(true)}
-              onMouseLeave={() => setIsHoveredConfirm(false)}
-              onMouseDown={() => setIsActiveConfirm(true)}
-              onMouseUp={() => setIsActiveConfirm(false)}
-            >
-              <img src={confirmImageSource()} alt="button icon" />
-            </button>
-          </div>
-        ) : (
+        <div className="flex flex-col md:flex-row gap-10">
           <button
-            onClick={() => setPlay(true)}
-            className="text-[#A6FFEE] text-lg font-semibold button flex justify-center items-center"
+            onMouseEnter={() => setIsHoveredRoll(true)}
+            onMouseLeave={() => setIsHoveredRoll(false)}
+            onMouseDown={() => setIsActiveRoll(true)}
+            onMouseUp={() => setIsActiveRoll(false)}
           >
-            <span>MINT TO PLAY</span>
+            <img src={rollImageSource()} alt="button icon" />
           </button>
-        )}
+          <button
+            onMouseEnter={() => setIsHoveredConfirm(true)}
+            onMouseLeave={() => setIsHoveredConfirm(false)}
+            onMouseDown={() => setIsActiveConfirm(true)}
+            onMouseUp={() => setIsActiveConfirm(false)}
+          >
+            <img src={confirmImageSource()} alt="button icon" />
+          </button>
+        </div>
       </div>
     </div>
   );

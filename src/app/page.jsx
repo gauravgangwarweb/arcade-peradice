@@ -29,7 +29,25 @@ export default function Home() {
             <p className="text-[#AE4DFF]">purple = 6x</p>
           </div>
         </div>
-        <div className="w-full grid grid-cols-1 md:grid-cols-12 border rounded-md mt-10 md:mt-14 py-4">
+        <img className="mt-8 hidden md:block" loading="lazy" src="rules-panel.png" alt="rules-panel" />
+        <img className="mt-8 block md:hidden" loading="lazy" src="rules-panel-mobile.png" alt="rules-panel" />
+        <div className="flex justify-center items-center">
+          <div className="flex items-center gap-6 md:border-t-2 border-white py-3 px-8 mt-4 md:mt-8">
+            <a href="">
+              <img loading="lazy" src="twitter.png" alt="twitter" />
+            </a>
+            <a href="">
+              <img loading="lazy" src="discord.png" alt="discord" />
+            </a>
+            <a href="">
+              <img loading="lazy" src="telegram.png" alt="telegram" />
+            </a>
+            <a href="">
+              <img loading="lazy" src="coingecko.png" alt="coingecko" />
+            </a>
+          </div>
+        </div>
+        {/* <div className="w-full grid grid-cols-1 md:grid-cols-12 border rounded-md mt-10 md:mt-14 py-4">
           <div className="col-span-10 border-r">
             <h4 className="text-lg text-[#4FFFFF] text-center md:ml-56">
               GAMEPLAY
@@ -70,7 +88,7 @@ export default function Home() {
             <p className="text-[#1A9FFF]">blue = 5x</p>
             <p className="text-[#AE4DFF]">purple = 6x</p>
           </div>
-        </div>
+        </div> */}
       </main>
     </>
   );

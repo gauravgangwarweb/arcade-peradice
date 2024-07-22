@@ -10,7 +10,7 @@
   display: inline-block;
   font-size: 14px;
   color: #fff;
-  background-color: #000;
+  background: linear-gradient(357deg, rgba(10,10,10,1) 0%, rgba(29,31,32,1) 100%);
   border: 4px solid #EB0F76;
   border-radius: 30px;
   text-align: center;

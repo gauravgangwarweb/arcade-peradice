@@ -11,6 +11,7 @@ const ConnectWalletBtn = () => {
 
   return (
     <button
+      className="hidden md:block"
       onClick={() => {
         handleClick();
       }}
