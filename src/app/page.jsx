@@ -29,7 +29,7 @@ export default function Home() {
             <p className="text-[#AE4DFF]">purple = 6x</p>
           </div>
         </div>
-        <img className="mt-8 hidden md:block" loading="lazy" src="rules-panel.png" alt="rules-panel" />
+        <img className="mt-8 hidden md:block" loading="lazy" src="rules-panel.svg" alt="rules-panel" />
         <img className="mt-8 block md:hidden" loading="lazy" src="rules-panel-mobile.png" alt="rules-panel" />
         <div className="flex justify-center items-center">
           <div className="flex items-center gap-6 md:border-t-2 border-white py-3 px-8 mt-4 md:mt-8">

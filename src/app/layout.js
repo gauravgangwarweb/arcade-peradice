@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 const retro = localfont({
   src: [{
-    path: "../../public/fonts/retro-gaming.ttf"
+    path: "../../public/fonts/PixelOperator.ttf"
   }],
   variable: "--font-retro",
 })
